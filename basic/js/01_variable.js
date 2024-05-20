@@ -18,6 +18,7 @@ console.log(username2)
 // 1 .var 
 // 읽기와 쓰기가 가능 덮어쓰기 가능
 // 블럭을 무시한다. 하지만 순서는 따라야한다
+// 블럭을 무시하기때문에 남용하면 코드가 어지러워질듯하다.
 {
     var username = 'alice' 
     console.log(username)
@@ -31,8 +32,8 @@ console.log(username)
 // 2 .let
 // 이름만 선언해도 상관없음
 // 읽기와 쓰기가 가능 덮어쓰기 가능
-// 블럭안에서만 가능
-// 가장 유연하게 쓸수있는 변수인듯 하다.(블럭안 한정)
+// 각자의 블럭안에서만 가능
+// 가장 유연하게 쓸수있는 변수인듯 하다.
 {
     let title = 'html'
     console.log(title)

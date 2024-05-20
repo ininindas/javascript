@@ -31,7 +31,8 @@ console.log(username)
 // 2 .let
 // 이름만 선언해도 상관없음
 // 읽기와 쓰기가 가능 덮어쓰기 가능
-//블럭안에서만 가능
+// 블럭안에서만 가능
+// 가장 유연하게 쓸수있는 변수인듯 하다.(블럭안 한정)
 {
     let title = 'html'
     console.log(title)
@@ -46,7 +47,9 @@ console.log(username)
 // 3. const
 //읽기만 가능 변하지 않는다.
 //상수 한번지정하면 덮어쓰기가 불가능
-//const 쓰다 오류나면 let으로 바꾼다
+
+// ***const 쓰다 오류나면 let으로 바꾼다***
+
 {
     const subject = 'html'
     console.log(subject);
@@ -69,7 +72,7 @@ console.log(username)
 // 함수나 메서드에서 리턴 할 수 있다.
 
 // 5. 문자형 string
-// 의미가 나늴
+// 의미가 나뉠수 있는것은 앞에 대문자로 쓰여진다.
 {
     const name1 = 'alice'
     const name2 = 'alice'
@@ -80,11 +83,11 @@ console.log(username)
     const fullName = firstName + ' ' + lastName
     console.log(fullName);
     console.log(`${firstName}   ${lastName}`);
-    // ``(베틱)1옆에 있는거  $(변수이름) 이게 편하다
+    // ``(베틱)키보드 1 옆에 있는거  $(변수이름) 이게 편하다
 }
 
 // 6. 숫자형 Number
-// '' 에 넣는건 문자
+// '' 에 넣은 숫자는 문자
 {
     const num = 10
     const PI = 3.14
@@ -102,7 +105,7 @@ console.log(username)
 }
 
 // 7. 불린 Boolean
-{
+{ //코딩에서 자주쓰는 참 거짓
     const a = true
     const b = false
 
@@ -116,6 +119,7 @@ console.log(username)
 // 8. null / undefined
 // null - 존제하지 않는 값
 // undefined - 값이 할당되지 않은 상태
+// undefined는 열여있는 빈 상자  null은 포장되어있는 빈 상자(안에 아무것도 넣을수 없음)
 {
     const box = null
     console.log(`값은 ${box}이고 타입은 ${typeof box}입니다.`);
@@ -136,6 +140,7 @@ console.log(username)
     console.log(`값은 ${word}이고 타입은 ${typeof word}입니다.`);
     word = '100' / 10
     console.log(`값은 ${word}이고 타입은 ${typeof word}입니다.`);
+    //각자의 상황에 따라 값이 자기 맘대로 바뀜 그래서 서서히 안쓰이는 추세
 }
 {
     // 형변환
@@ -152,6 +157,7 @@ console.log(username)
         String(null),
         String(undefined),
     );
+    // 그냥 다 문자로 다 바꿔줌
 
     console.log(
         Number('1234'),
@@ -161,6 +167,7 @@ console.log(username)
         Number(null),
         Number(undefined),
     );
+    //문자에 숫자만 있음 숫자로 참 거짓은 1 0 null도 0 undefined는 안에 값이 없어서 NaN
 
     console.log(
         Boolean(0),
@@ -171,4 +178,6 @@ console.log(username)
         Boolean(undefined),
         Boolean(NaN),
     );
+    //이친구는 참 거짓만 보여줌  안에 값이 있으면 1(숫자는 0 제외) ''는 그냥은 안되고 공백이있어야함
+    //안에 값이 비어있거나 존제하지 않으면 0
 }

@@ -24,7 +24,10 @@
     //     console.log('여름입니다.');
     // } else if (month >= 9 && month <= 11) {
     //     console.log('가을입니다.');
-    // } else {
+    // } else if (month > 12) {
+    //     console.log('세계는 12월 까지 있습니다.');
+    // }
+    //  else {
     //     console.log('겨울입니다.');
     // }
 }

@@ -111,6 +111,7 @@
     const value1 = '100'
     const value2 = 100
     console.log(value1 == value2);
+    // 이건 자바 스크립트 특성 떄매 참
     console.log(value1 != value2);
     console.log(value1 === value2);
     // ===는 섬세한거(타입)까지 채크한다고함
@@ -123,4 +124,35 @@
     console.log('' === false);
     console.log(null == undefined);
     console.log(null === undefined);
+    console.log('-----------------------');
+
+}
+
+// 8. 상황조건 연산자  ? 와 :
+{
+    const a = 10
+    const b = 15
+
+//   a > b ? '감사합니다.' : '안녕하세요'
+//    조건 ?  '참 실행값'  : '거짓 실행값'
+    // const result = a > b ? '감사합니다.' : '안녕하세요'
+    // console.log(result);
+}
+
+// 실습 : 표준 체중 태스트 프로그램
+// 홍길동 : 키 180 , 체중 80kg  
+// 표준체중 공식  : (키 - 100) * 0.9
+{
+    // const userHeight = 180
+    // const userWeight = 80
+    // const normalWeight = (userHeight - 100) * 0.9
+    // console.log(normalWeight);
+
+    const name = prompt('당신의 이름은?')
+    const height = prompt('당신의 키는?')
+    const weight = prompt('당신의 체중은?')
+    const normalWeight = (height - 100) * 0.9
+    const result = weight >= normalWeight - 5 && weight <= normalWeight + 5
+    const masage = result ? '적정체중입니다' : '적정체중이 아닙니다.'
+    document.querySelector('.text').innerHTML = `${name}님은 ${masage}`
 }

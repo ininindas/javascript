@@ -58,7 +58,7 @@ function plus(a,b){
     return a+b                                  //return 리턴은 만나면 뒷줄 무시하고 끝남
     console.log('계산을 마쳤습니다'); 
 }
-const result = plus(5,10)
+const result = plus(5,10) 
 console.log(result);
 
 // 7. callback function 콜백함수                       

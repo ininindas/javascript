@@ -29,8 +29,35 @@ h1{
 }
 
 .content .item h2 {
-    background-color: #ddd;
+    background-color: #fff;
     padding: 16px 0;
     cursor: pointer;
     font-size: 22px;
+    position: relative;
+    border-bottom:  1xp solid #999;
+}
+
+.content .item h2::after{
+    font-family: 'xeicon';
+    content: '\e913';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.content .item p {
+    line-height: 1.6;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.content .item.active p {
+    padding: 20px 0;
+    height: auto;
+}
+
+.content .item.active h2::after {
+    content: '\e91a';
 }

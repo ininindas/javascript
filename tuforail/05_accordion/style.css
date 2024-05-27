@@ -1,43 +1,42 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
-    color: inherit;
+a {
     text-decoration: none;
+    color: inherit;
 }
 
-h1{
+h1 {
     text-align: center;
     margin: 50px 0;
 }
 
-.content {
+.contents {
     max-width: 800px;
-    margin: 0 auto;
     padding: 0 16px;
+    margin: 0 auto;
 }
 
-.content .item {
-
+.contents .item {
 }
 
-.content .item h2 {
+.contents .item h2 {
     background-color: #fff;
     padding: 16px 0;
     cursor: pointer;
     font-size: 22px;
     position: relative;
-    border-bottom:  1xp solid #999;
+    border-bottom: 1px solid #999;
 }
 
-.content .item h2::after{
+.contents .item h2::after {
     font-family: 'xeicon';
     content: '\e913';
     position: absolute;
@@ -46,18 +45,19 @@ h1{
     right: 0;
 }
 
-.content .item p {
+.contents .item p {
     line-height: 1.6;
     height: 0;
     overflow: hidden;
+    padding: 0;
     transition: all 0.3s;
 }
 
-.content .item.active p {
-    padding: 20px 0;
+.contents .item.active p {
     height: auto;
+    padding: 20px 0;
 }
 
-.content .item.active h2::after {
+.contents .item.active h2::after {
     content: '\e91a';
 }

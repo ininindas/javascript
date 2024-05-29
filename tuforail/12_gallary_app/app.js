@@ -8,6 +8,7 @@ const API_KEY = 'jgAyYpKV3dtlyT3w3lTzLlr1wCJ8cw2B9KWNAx9w8sbbuVdieLwakKIA'
 const galleryDiv = document.querySelector('.gallery')
 const form = document.querySelector('form')
 const loadMore = document.querySelector('.load_more')
+const logo = document.querySelector('.logo')
 
 let pageIndex = 1
 let query = ''
@@ -24,7 +25,7 @@ function gteSearchImg(query){
 }
 
 function paintImg (photos){
-    console.log(photos);
+    // console.log(photos);
     photos.forEach(photo => {
         const item = document.createElement('div')
         item.classList.add('item')
@@ -62,8 +63,28 @@ function init(){
     form.addEventListener('submit',e => {
         e.preventDefault()
         const searchValue = e.target.querySelector('input').value
-        console.log(searchValue);
+        query = searchValue
         gteSearchImg(searchValue)
+        form.reset()
+    })
+
+    loadMore.addEventListener('click',e=> {
+        e.preventDefault()
+        pageIndex++
+        getImg(pageIndex)
+        if(query === ''){
+            getImg(pageIndex)
+        }else{
+            getMoreImg(query)
+            
+        }
+    })
+
+    logo.addEventListener('click',e => {
+        e.preventDefault()
+        pageIndex = 1
+        galleryDiv.innerHTML = ''
+        getImg(pageIndex)
     })
 }
 

@@ -13,9 +13,9 @@ class WeatherApp{
         this.init()
     }
 
-    paintWeater(){
-        this.city.inner = date.name
-        this.des.innerText = deat.weather[0].description
+    paintWeater(data){
+        this.city.innerText = data.name
+        this.des.innerText = date.weather [0].description
         this.degree.innerText = date.main.temp
     }
 

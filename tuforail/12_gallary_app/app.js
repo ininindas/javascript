@@ -71,7 +71,6 @@ function init(){
     loadMore.addEventListener('click',e=> {
         e.preventDefault()
         pageIndex++
-        getImg(pageIndex)
         if(query === ''){
             getImg(pageIndex)
         }else{
